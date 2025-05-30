@@ -81,14 +81,14 @@ const Projects: React.FC = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <section id="projects" className="py-20 px-6 bg-gray-50">
+    <section id="projects" className="py-20 px-6 bg-gradient-to-b from-dark-900 to-dark-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">My Projects</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white glow-text">My Projects</h2>
+          <p className="mt-4 text-blue-200 max-w-2xl mx-auto">
             Here are some of my recent projects spanning web development, data science, and machine learning.
           </p>
-          <div className="w-24 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full glow"></div>
         </div>
 
         <div className="flex justify-center mb-12 flex-wrap gap-2">
@@ -98,8 +98,8 @@ const Projects: React.FC = () => {
               onClick={() => setFilter(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 filter === category
-                  ? 'bg-indigo-600 text-white shadow-md'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-lg shadow-blue-500/50'
+                  : 'bg-dark-800/50 text-blue-200 hover:bg-blue-900/30 border border-blue-500/30'
               }`}
             >
               {category}
@@ -111,7 +111,7 @@ const Projects: React.FC = () => {
           {filteredProjects.map(project => (
             <div
               key={project.id}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
+              className="bg-dark-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 group hover:shadow-lg hover:shadow-blue-500/10"
             >
               <div className="h-48 overflow-hidden relative">
                 <img
@@ -119,13 +119,13 @@ const Projects: React.FC = () => {
                   alt={project.title}
                   className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
                   <div className="flex space-x-3">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/40 transition-colors"
+                      className="p-2 bg-blue-900/30 backdrop-blur-sm rounded-full text-white hover:bg-blue-800/50 transition-colors border border-blue-500/30"
                       aria-label="GitHub Repository"
                     >
                       <Github className="w-5 h-5" />
@@ -135,7 +135,7 @@ const Projects: React.FC = () => {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/40 transition-colors"
+                        className="p-2 bg-blue-900/30 backdrop-blur-sm rounded-full text-white hover:bg-blue-800/50 transition-colors border border-blue-500/30"
                         aria-label="Live Demo"
                       >
                         <ExternalLink className="w-5 h-5" />
@@ -148,17 +148,17 @@ const Projects: React.FC = () => {
               <div className="p-6">
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="font-bold text-xl text-gray-900 group-hover:text-indigo-600 transition-colors">
+                    <h3 className="font-bold text-xl text-white group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-indigo-600 mt-1">{project.category}</p>
+                    <p className="text-sm text-blue-400 mt-1">{project.category}</p>
                   </div>
-                  <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+                  <div className="p-2 bg-blue-900/30 text-blue-400 rounded-lg border border-blue-500/30">
                     <FolderOpen className="w-5 h-5" />
                   </div>
                 </div>
                 
-                <p className="mt-4 text-gray-600 text-sm line-clamp-3">
+                <p className="mt-4 text-blue-200 text-sm line-clamp-3">
                   {project.description}
                 </p>
                 
@@ -166,7 +166,7 @@ const Projects: React.FC = () => {
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full"
+                      className="px-3 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-500/30"
                     >
                       {tech}
                     </span>

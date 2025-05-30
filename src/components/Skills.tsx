@@ -92,17 +92,17 @@ const SkillBar: React.FC<{ skill: Skill; delay: number }> = ({ skill, delay }) =
   return (
     <div className="mb-4">
       <div className="flex justify-between mb-1">
-        <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-        <span className="text-sm font-medium text-gray-500">{skill.level}%</span>
+        <span className="text-sm font-medium text-blue-200">{skill.name}</span>
+        <span className="text-sm font-medium text-blue-300">{skill.level}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5">
+      <div className="w-full bg-dark-900/50 rounded-full h-2.5 border border-blue-500/30">
         <div
           ref={barRef}
-          className="h-2.5 rounded-full transition-all duration-1000 ease-out opacity-0"
+          className="h-2.5 rounded-full transition-all duration-1000 ease-out opacity-0 glow"
           style={{ 
             width: '0%', 
             backgroundColor: 
-              skill.category === 'language' ? '#4F46E5' : 
+              skill.category === 'language' ? '#3B82F6' : 
               skill.category === 'framework' ? '#8B5CF6' : 
               skill.category === 'tool' ? '#10B981' : 
               '#0EA5E9'
@@ -115,24 +115,24 @@ const SkillBar: React.FC<{ skill: Skill; delay: number }> = ({ skill, delay }) =
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 px-6 bg-white">
+    <section id="skills" className="py-20 px-6 bg-gradient-to-b from-dark-800 to-dark-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">My Skills</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white glow-text">My Skills</h2>
+          <p className="mt-4 text-blue-200 max-w-2xl mx-auto">
             A comprehensive overview of my technical skills and proficiency levels.
           </p>
-          <div className="w-24 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full glow"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {skillCategories.map((category, idx) => (
-            <div key={idx} className="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div key={idx} className="bg-dark-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-indigo-100 text-indigo-600 rounded-lg mr-4">
+                <div className="p-3 bg-blue-900/30 text-blue-400 rounded-lg mr-4 border border-blue-500/30">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-800">{category.name}</h3>
+                <h3 className="text-xl font-bold text-white">{category.name}</h3>
               </div>
               <div>
                 {category.skills.map((skill, index) => (
@@ -143,17 +143,17 @@ const Skills: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-white shadow-lg">
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white shadow-lg border border-blue-500/30">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0 text-center md:text-left">
               <h3 className="text-2xl font-bold">Looking for collaboration?</h3>
-              <p className="mt-2 text-indigo-100">
+              <p className="mt-2 text-blue-100">
                 I'm always open to discussing new projects and opportunities.
               </p>
             </div>
             <a
               href="#contact"
-              className="px-6 py-3 bg-white text-indigo-600 rounded-lg shadow hover:bg-gray-100 transition-colors font-medium"
+              className="px-6 py-3 bg-white text-blue-600 rounded-lg shadow-lg hover:shadow-white/50 transition-all duration-300 font-medium group"
             >
               Get In Touch
             </a>

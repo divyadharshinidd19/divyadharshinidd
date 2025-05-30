@@ -89,47 +89,47 @@ const ExperienceCard: React.FC<{ experience: Experience; isLast: boolean }> = ({
     >
       {/* Timeline line */}
       {!isLast && (
-        <div className="absolute left-8 top-12 bottom-0 w-0.5 bg-gray-200"></div>
+        <div className="absolute left-8 top-12 bottom-0 w-0.5 bg-blue-500/30"></div>
       )}
       
       {/* Timeline dot */}
-      <div className="absolute left-8 top-8 w-8 h-8 rounded-full bg-indigo-600 transform -translate-x-1/2 flex items-center justify-center">
+      <div className="absolute left-8 top-8 w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 transform -translate-x-1/2 flex items-center justify-center glow">
         <Briefcase className="w-4 h-4 text-white" />
       </div>
       
       {/* Content */}
       <div className="ml-12 relative">
-        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+        <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-            <h3 className="text-xl font-bold text-gray-900">{experience.position}</h3>
-            <span className="bg-indigo-100 text-indigo-800 text-sm font-medium mt-2 sm:mt-0 px-3 py-1 rounded-full">
+            <h3 className="text-xl font-bold text-white">{experience.position}</h3>
+            <span className="bg-blue-900/30 text-blue-300 text-sm font-medium mt-2 sm:mt-0 px-3 py-1 rounded-full border border-blue-500/30">
               {experience.company}
             </span>
           </div>
           
-          <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mb-4 space-y-2 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col sm:flex-row sm:items-center text-blue-200 mb-4 space-y-2 sm:space-y-0 sm:space-x-6">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2 text-gray-500" />
+              <Calendar className="w-4 h-4 mr-2 text-blue-400" />
               <span className="text-sm">{experience.duration}</span>
             </div>
             <div className="flex items-center">
-              <MapPin className="w-4 h-4 mr-2 text-gray-500" />
+              <MapPin className="w-4 h-4 mr-2 text-blue-400" />
               <span className="text-sm">{experience.location}</span>
             </div>
           </div>
           
           <ul className="mt-4 space-y-2">
             {experience.description.map((item, index) => (
-              <li key={index} className="flex">
-                <span className="mr-2">•</span>
-                <span className="text-gray-700">{item}</span>
+              <li key={index} className="flex text-blue-100">
+                <span className="mr-2 text-blue-400">•</span>
+                <span>{item}</span>
               </li>
             ))}
           </ul>
           
           <div className="mt-6 flex flex-wrap gap-2">
             {experience.skills.map((skill, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">
+              <span key={index} className="px-3 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-500/30">
                 {skill}
               </span>
             ))}
@@ -142,14 +142,14 @@ const ExperienceCard: React.FC<{ experience: Experience; isLast: boolean }> = ({
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-20 px-6 bg-gray-50">
+    <section id="experience" className="py-20 px-6 bg-gradient-to-b from-dark-800 to-dark-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Experience</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white glow-text">Experience</h2>
+          <p className="mt-4 text-blue-200 max-w-2xl mx-auto">
             My professional journey and internship experiences.
           </p>
-          <div className="w-24 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full glow"></div>
         </div>
         
         <div className="space-y-12">

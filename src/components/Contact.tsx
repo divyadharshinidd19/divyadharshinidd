@@ -20,7 +20,6 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setFormStatus('submitting');
 
-    // Simulating form submission
     setTimeout(() => {
       setFormStatus('success');
       setFormData({
@@ -30,7 +29,6 @@ const Contact: React.FC = () => {
         message: ''
       });
       
-      // Reset form status after 3 seconds
       setTimeout(() => {
         setFormStatus('idle');
       }, 3000);
@@ -38,56 +36,55 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-50 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-100 rounded-full opacity-50 blur-3xl"></div>
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-100 rounded-full opacity-50 blur-3xl"></div>
+    <section id="contact" className="py-20 px-6 bg-gradient-to-b from-dark-900 to-dark-800 relative overflow-hidden">
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Get In Touch</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white glow-text">Get In Touch</h2>
+          <p className="mt-4 text-blue-200 max-w-2xl mx-auto">
             Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
           </p>
-          <div className="w-24 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full glow"></div>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div className="bg-white rounded-xl shadow-sm p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+          <div className="bg-dark-800/50 backdrop-blur-sm rounded-xl border border-blue-500/30 p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="p-3 bg-indigo-100 text-indigo-600 rounded-lg mr-4">
+                <div className="p-3 bg-blue-900/30 text-blue-400 rounded-lg mr-4 border border-blue-500/30">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <a href="mailto:your.email@example.com" className="text-indigo-600 hover:text-indigo-800 transition-colors">
-                   divyadharshinidd19@gmail.com
+                  <h4 className="font-semibold text-white">Email</h4>
+                  <a href="mailto:divyadharshinidd19@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                    divyadharshinidd19@gmail.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="p-3 bg-indigo-100 text-indigo-600 rounded-lg mr-4">
+                <div className="p-3 bg-blue-900/30 text-blue-400 rounded-lg mr-4 border border-blue-500/30">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Phone</h4>
-                  <a href="tel:+911234567890" className="text-indigo-600 hover:text-indigo-800 transition-colors">
+                  <h4 className="font-semibold text-white">Phone</h4>
+                  <a href="tel:+916379709526" className="text-blue-400 hover:text-blue-300 transition-colors">
                     +91 63797 09526
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="p-3 bg-indigo-100 text-indigo-600 rounded-lg mr-4">
+                <div className="p-3 bg-blue-900/30 text-blue-400 rounded-lg mr-4 border border-blue-500/30">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Location</h4>
-                  <p className="text-gray-600">
+                  <h4 className="font-semibold text-white">Location</h4>
+                  <p className="text-blue-200">
                     Coimbatore, Tamil Nadu, India
                   </p>
                 </div>
@@ -95,13 +92,13 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="mt-8">
-              <h4 className="font-semibold text-gray-900 mb-4">Social Profiles</h4>
+              <h4 className="font-semibold text-white mb-4">Social Profiles</h4>
               <div className="flex space-x-4">
                 <a 
                   href="https://github.com/divyadharshinidd19" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                  className="p-3 bg-blue-900/30 text-blue-400 rounded-lg hover:bg-blue-800/30 transition-colors border border-blue-500/30"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
@@ -110,7 +107,7 @@ const Contact: React.FC = () => {
                   href="https://linkedin.com/in/divyadharshinidd19" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                  className="p-3 bg-blue-900/30 text-blue-400 rounded-lg hover:bg-blue-800/30 transition-colors border border-blue-500/30"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -118,27 +115,27 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-8 pt-8 border-t border-gray-100">
-              <h4 className="font-semibold text-gray-900 mb-4">Download Resume</h4>
+            <div className="mt-8 pt-8 border-t border-blue-500/30">
+              <h4 className="font-semibold text-white mb-4">Download Resume</h4>
               <a 
                 href="/path/to/your-resume.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition-colors font-medium"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 font-medium group"
               >
                 Download Resume
-                <ExternalLink className="w-4 h-4 ml-2" />
+                <ExternalLink className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-sm p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Message</h3>
+          <div className="bg-dark-800/50 backdrop-blur-sm rounded-xl border border-blue-500/30 p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
             
             <form onSubmit={handleSubmit}>
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-blue-200 mb-1">
                     Full Name
                   </label>
                   <input
@@ -148,12 +145,12 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                    className="w-full px-4 py-2 bg-dark-900/50 border border-blue-500/30 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-white"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-blue-200 mb-1">
                     Email Address
                   </label>
                   <input
@@ -163,12 +160,12 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                    className="w-full px-4 py-2 bg-dark-900/50 border border-blue-500/30 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-white"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="subject" className="block text-sm font-medium text-blue-200 mb-1">
                     Subject
                   </label>
                   <input
@@ -178,12 +175,12 @@ const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                    className="w-full px-4 py-2 bg-dark-900/50 border border-blue-500/30 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-white"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-blue-200 mb-1">
                     Message
                   </label>
                   <textarea
@@ -193,19 +190,19 @@ const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                    className="w-full px-4 py-2 bg-dark-900/50 border border-blue-500/30 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-white"
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
                   disabled={formStatus === 'submitting'}
-                  className={`w-full px-6 py-3 flex items-center justify-center rounded-lg shadow font-medium transition-colors ${
+                  className={`w-full px-6 py-3 flex items-center justify-center rounded-lg shadow font-medium transition-all duration-300 ${
                     formStatus === 'submitting'
-                      ? 'bg-gray-400 cursor-not-allowed'
+                      ? 'bg-blue-900/50 cursor-not-allowed'
                       : formStatus === 'success'
-                      ? 'bg-green-600 hover:bg-green-700 text-white'
-                      : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                      ? 'bg-green-600 hover:bg-green-700'
+                      : 'bg-gradient-to-r from-blue-600 to-blue-400 hover:shadow-blue-500/50'
                   }`}
                 >
                   {formStatus === 'submitting' ? (
@@ -218,9 +215,6 @@ const Contact: React.FC = () => {
                     </span>
                   ) : formStatus === 'success' ? (
                     <span className="inline-flex items-center">
-                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
                       Message Sent!
                     </span>
                   ) : (
