@@ -25,7 +25,7 @@ const About: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
             <div className="relative overflow-hidden rounded-2xl border border-primary-500/30 backdrop-blur-sm">
               <motion.img 
-                src="/IMG_7854.JPG"
+                src="/IMG_7854.png"
                 alt="Profile"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                 whileHover={{ scale: 1.05 }}
