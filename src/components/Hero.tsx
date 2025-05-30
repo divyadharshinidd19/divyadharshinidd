@@ -2,6 +2,36 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Code, Brain, Database } from 'lucide-react';
 
+const Balloon = ({ delay = 0 }) => (
+  <motion.div
+    className="absolute"
+    initial={{ y: '100vh' }}
+    animate={{ 
+      y: ['-20vh', '-120vh'],
+      x: ['-10vw', '10vw', '-10vw']
+    }}
+    transition={{
+      duration: 15,
+      delay,
+      repeat: Infinity,
+      ease: "linear"
+    }}
+    style={{
+      left: `${Math.random() * 80 + 10}%`,
+    }}
+  >
+    <div 
+      className="w-16 h-20 relative"
+      style={{
+        background: `hsl(${Math.random() * 60 + 190}, 100%, 65%)`,
+        borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%',
+      }}
+    >
+      <div className="absolute bottom-0 left-1/2 w-0.5 h-12 bg-white/30 -translate-x-1/2" />
+    </div>
+  </motion.div>
+);
+
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-gradient-to-b from-dark-900 via-dark-800 to-dark-700">
@@ -10,6 +40,11 @@ const Hero: React.FC = () => {
         <div className="geometric-bg opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-radial from-primary-500/10 via-transparent to-transparent"></div>
       </div>
+      
+      {/* Floating Balloons */}
+      {[...Array(8)].map((_, i) => (
+        <Balloon key={i} delay={i * 2} />
+      ))}
       
       {/* Floating Elements */}
       <motion.div 
@@ -43,9 +78,9 @@ const Hero: React.FC = () => {
         ))}
       </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
         <motion.div 
-          className="w-full lg:w-1/2 text-center lg:text-left"
+          className="w-full max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -64,11 +99,11 @@ const Hero: React.FC = () => {
             <h2 className="mt-4 text-xl md:text-2xl text-primary-200 font-light">
               AI & Data Science Developer
             </h2>
-            <p className="mt-6 text-lg text-gray-300 max-w-xl mx-auto lg:mx-0">
+            <p className="mt-6 text-lg text-gray-300 max-w-xl mx-auto">
               Aspiring AI/ML Developer with experience in web development and data-driven projects. 
               Currently pursuing B.Tech in AI & DS with internship experience at leading companies.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a 
                 href="#projects" 
                 className="btn-primary group"
@@ -87,42 +122,6 @@ const Hero: React.FC = () => {
                 Contact Me
               </motion.a>
             </div>
-          </div>
-        </motion.div>
-        
-        {/* 3D Animated Element */}
-        <motion.div 
-          className="w-full lg:w-1/2 flex justify-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative w-80 h-80">
-            <motion.div 
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-primary-400 opacity-20 blur-3xl"
-              animate={{ 
-                scale: [1, 1.2, 1],
-                rotate: [0, 180, 360]
-              }}
-              transition={{ 
-                duration: 8,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-            />
-            <motion.img
-              src="/IMG_7854.JPG"
-              alt="Profile"
-              className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-primary-500/30"
-              animate={{ 
-                boxShadow: ['0 0 20px rgba(14, 165, 233, 0.3)', '0 0 40px rgba(14, 165, 233, 0.5)', '0 0 20px rgba(14, 165, 233, 0.3)']
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-            />
           </div>
         </motion.div>
       </div>
