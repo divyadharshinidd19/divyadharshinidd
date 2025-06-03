@@ -1,83 +1,84 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Code, Brain, Database } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
-const Balloon = ({ delay = 0 }) => (
-  <motion.div
-    className="absolute"
-    initial={{ y: '100vh' }}
-    animate={{ 
-      y: ['-20vh', '-120vh'],
-      x: ['-10vw', '10vw', '-10vw']
-    }}
-    transition={{
-      duration: 15,
-      delay,
-      repeat: Infinity,
-      ease: "linear"
-    }}
-    style={{
-      left: `${Math.random() * 80 + 10}%`,
-    }}
-  >
-    <div 
-      className="w-16 h-20 relative"
-      style={{
-        background: `hsl(${Math.random() * 60 + 190}, 100%, 65%)`,
-        borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%',
-      }}
-    >
-      <div className="absolute bottom-0 left-1/2 w-0.5 h-12 bg-white/30 -translate-x-1/2" />
-    </div>
-  </motion.div>
-);
-
-const Hero: React.FC = () => {
+const ParticleBackground = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-gradient-to-b from-dark-900 via-dark-800 to-dark-700">
-      {/* 3D Animated Background */}
-      <div className="absolute inset-0">
-        <div className="geometric-bg opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-primary-500/10 via-transparent to-transparent"></div>
-      </div>
-      
-      {/* Floating Balloons */}
-      {[...Array(8)].map((_, i) => (
-        <Balloon key={i} delay={i * 2} />
+    <div className="absolute inset-0 overflow-hidden">
+      {[...Array(50)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-primary-400/20 rounded-full"
+          initial={{
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+          }}
+          animate={{
+            x: [
+              Math.random() * window.innerWidth,
+              Math.random() * window.innerWidth,
+              Math.random() * window.innerWidth,
+            ],
+            y: [
+              Math.random() * window.innerHeight,
+              Math.random() * window.innerHeight,
+              Math.random() * window.innerHeight,
+            ],
+          }}
+          transition={{
+            duration: Math.random() * 10 + 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
       ))}
-      
-      {/* Floating Elements */}
-      <motion.div 
-        className="absolute inset-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {[...Array(20)].map((_, i) => (
+    </div>
+  );
+};
+
+const CubeBackground = () => {
+  return (
+    <div className="absolute inset-0">
+      <div className="relative w-full h-full">
+        {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: Math.random() * 4 + 2 + 'px',
-              height: Math.random() * 4 + 2 + 'px',
-              backgroundColor: 'rgba(56, 189, 248, 0.3)',
-              borderRadius: '50%',
+              width: Math.random() * 100 + 50 + 'px',
+              height: Math.random() * 100 + 50 + 'px',
+              left: Math.random() * 100 + '%',
+              top: Math.random() * 100 + '%',
+              background: `linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(56, 189, 248, 0.05))`,
+              backdropFilter: 'blur(8px)',
+              borderRadius: '20px',
+              border: '1px solid rgba(56, 189, 248, 0.2)',
             }}
             animate={{
-              y: [0, Math.random() * 30 - 15],
-              opacity: [0.3, 0.8, 0.3],
+              rotate: [0, 90, 180, 270, 360],
+              scale: [1, 1.1, 1],
+              y: [0, -30, 0],
             }}
             transition={{
-              duration: Math.random() * 2 + 2,
+              duration: Math.random() * 10 + 20,
               repeat: Infinity,
-              repeatType: "reverse",
+              ease: "linear",
             }}
           />
         ))}
-      </motion.div>
+      </div>
+    </div>
+  );
+};
 
+const Hero: React.FC = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-gradient-to-b from-dark-900 via-dark-800 to-dark-700">
+      <ParticleBackground />
+      <CubeBackground />
+      
+      <div className="absolute inset-0 bg-gradient-radial from-primary-500/5 via-transparent to-transparent"></div>
+      
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
         <motion.div 
           className="w-full max-w-3xl"
@@ -85,7 +86,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="glass-card p-8 rounded-2xl">
+          <div className="glass-card p-8 rounded-2xl backdrop-blur-lg">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               <span className="block font-display">Hi, I'm </span>
               <motion.span 
