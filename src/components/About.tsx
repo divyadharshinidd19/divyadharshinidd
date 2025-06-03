@@ -25,20 +25,28 @@ const About: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
             <div className="relative overflow-hidden rounded-2xl border border-primary-500/30 backdrop-blur-sm">
               <motion.img 
-                src="/IMG_7854.png"
+                src="/IMG_7854.JPG"
                 alt="Profile"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                 whileHover={{ scale: 1.05 }}
               />
               
-              <div className="absolute -bottom-6 -right-6 bg-dark-800/80 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-[200px] border border-primary-500/30">
-                <div className="flex items-center text-primary-400 mb-2">
+              <div className="absolute -bottom-6 -right-6 bg-dark-800/90 backdrop-blur-sm p-6 rounded-xl shadow-lg max-w-[250px] border border-primary-500/30">
+                <div className="flex items-center text-primary-400 mb-3">
                   <GraduationCap className="w-5 h-5 mr-2" />
                   <h3 className="font-bold">Education</h3>
                 </div>
-                <p className="text-sm text-primary-100">
-                  B.Tech in AI & Data Science, 3rd Year
-                </p>
+                <div className="space-y-2">
+                  <p className="text-sm text-primary-100 font-medium">
+                    B.Tech in AI & Data Science
+                  </p>
+                  <p className="text-xs text-primary-300">
+                    Sri Krishna College of Engineering and Technology
+                  </p>
+                  <p className="text-xs text-primary-400">
+                    2021 - 2025 | CGPA: 8.9
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

@@ -93,19 +93,19 @@ const SkillBar: React.FC<{ skill: Skill; delay: number }> = ({ skill, delay }) =
     <div className="mb-4">
       <div className="flex justify-between mb-1">
         <span className="text-sm font-medium text-blue-200">{skill.name}</span>
-        <span className="text-sm font-medium text-blue-300">{skill.level}%</span>
+        <span className="text-sm font-medium text-blue-300/70">{skill.level}%</span>
       </div>
-      <div className="w-full bg-dark-900/50 rounded-full h-2.5 border border-blue-500/30">
+      <div className="w-full bg-dark-900/50 rounded-full h-2.5 border border-blue-500/20">
         <div
           ref={barRef}
-          className="h-2.5 rounded-full transition-all duration-1000 ease-out opacity-0 glow"
+          className="h-2.5 rounded-full transition-all duration-1000 ease-out opacity-0"
           style={{ 
             width: '0%', 
             backgroundColor: 
-              skill.category === 'language' ? '#3B82F6' : 
-              skill.category === 'framework' ? '#8B5CF6' : 
-              skill.category === 'tool' ? '#10B981' : 
-              '#0EA5E9'
+              skill.category === 'language' ? 'rgba(59, 130, 246, 0.5)' : 
+              skill.category === 'framework' ? 'rgba(139, 92, 246, 0.5)' : 
+              skill.category === 'tool' ? 'rgba(16, 185, 129, 0.5)' : 
+              'rgba(14, 165, 233, 0.5)'
           }}
         ></div>
       </div>
@@ -143,7 +143,7 @@ const Skills: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white shadow-lg border border-blue-500/30">
+        <div className="mt-16 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 text-white shadow-lg border border-blue-500/30">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0 text-center md:text-left">
               <h3 className="text-2xl font-bold">Looking for collaboration?</h3>
@@ -153,7 +153,7 @@ const Skills: React.FC = () => {
             </div>
             <a
               href="#contact"
-              className="px-6 py-3 bg-white text-blue-600 rounded-lg shadow-lg hover:shadow-white/50 transition-all duration-300 font-medium group"
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg shadow-lg hover:bg-white/20 transition-all duration-300 font-medium group"
             >
               Get In Touch
             </a>
