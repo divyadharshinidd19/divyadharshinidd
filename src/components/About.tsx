@@ -123,7 +123,7 @@ const About: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10">Get In Touch</span>
+                <span className="relative z-10">Let'z talk</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </motion.a>
             </div>
