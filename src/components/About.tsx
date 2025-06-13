@@ -9,7 +9,7 @@ const About: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white glow-text">About Me</h2>
           <p className="mt-4 text-primary-200 max-w-2xl mx-auto">
-            Get to know more about my journey and expertise in AI and Data Science.
+            Get to know more about my journey and expertise in Artificial Intelligence and Data Science.
           </p>
           <div className="w-24 h-1 bg-primary-600 mx-auto mt-4 rounded-full glow"></div>
         </div>
@@ -38,13 +38,13 @@ const About: React.FC = () => {
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm text-primary-100 font-medium">
-                    B.Tech in AI & Data Science
+                    B.Tech in AI & DS
                   </p>
                   <p className="text-xs text-primary-300">
-                    Sri Krishna College of Engineering and Technology
+                    Sri Krishna College of Technology
                   </p>
                   <p className="text-xs text-primary-400">
-                    2021 - 2025 | CGPA: 8.9
+                    2023 - 2027 | CGPA: 8.45
                   </p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ const About: React.FC = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-white glow-text">
-              Aspiring AI/ML Developer with a passion for innovation
+              Aspiring AI/DS Developer with a passion for innovation
             </h3>
             
             <p className="text-primary-100 leading-relaxed">
@@ -69,7 +69,7 @@ const About: React.FC = () => {
             </p>
             
             <p className="text-primary-100 leading-relaxed">
-              With internship experiences at Cognorize, Codesoft, and nxtLogic, I've had the opportunity 
+              With internship experiences at CognoRize, Codesoft, and NxtLogic, I've had the opportunity 
               to apply my skills in different domains - from web development to machine learning projects. 
               I'm constantly learning and expanding my skillset through courses, certifications, and 
               hands-on projects.
