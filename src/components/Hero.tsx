@@ -98,11 +98,10 @@ const Hero: React.FC = () => {
               </motion.span>
             </h1>
             <h2 className="mt-4 text-xl md:text-2xl text-primary-200 font-light">
-              AI & Data Science Developer
+              AI/DS DEVELOPER
             </h2>
             <p className="mt-6 text-lg text-gray-300 max-w-xl mx-auto">
-              Aspiring AI/ML Developer with experience in web development and data-driven projects. 
-              Currently pursuing B.Tech in AI & DS with internship experience at leading companies.
+              Passionate AI/ML enthusiast and 3rd-year B.Tech student in Artificial Intelligence and Data Science. Experienced in building real-time applications using Python, Spring Boot, and machine learning. Completed internships in Web Development, C++ Programming, and ML at companies like Cognorize, Codesoft, and nxtLogic. Eager to create impactful solutions through technology and innovation.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a 
