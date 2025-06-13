@@ -14,9 +14,9 @@ type Experience = {
 const experiences: Experience[] = [
   {
     id: 1,
-    company: "Cognorize",
+    company: "CognoRize InfoTech",
     position: "Web Development Intern",
-    duration: "May 2024 - Jul 2024",
+    duration: "Jun 2024 - Jul 2024",
     location: "Remote",
     description: [
       "Developed responsive web applications using React and Node.js",
@@ -27,9 +27,9 @@ const experiences: Experience[] = [
   },
   {
     id: 2,
-    company: "Codesoft",
+    company: "CodSoft",
     position: "C++ Programming Intern",
-    duration: "Jan 2024 - Mar 2024",
+    duration: "May 2024 - Jun 2024",
     location: "Remote",
     description: [
       "Built efficient algorithms for data processing and analysis",
@@ -40,10 +40,10 @@ const experiences: Experience[] = [
   },
   {
     id: 3,
-    company: "nxtLogic",
+    company: "Nxtlogic Software Solution",
     position: "Machine Learning Intern",
-    duration: "Aug 2023 - Nov 2023",
-    location: "Remote",
+    duration: "Apr 2025 - May 2025",
+    location: "Ghandhipuram, Coimbatore",
     description: [
       "Trained and evaluated machine learning models for text classification",
       "Preprocessed and cleaned datasets for model training",
