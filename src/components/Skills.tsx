@@ -21,8 +21,8 @@ const skillCategories: SkillCategory[] = [
     icon: <Code className="w-6 h-6" />,
     color: 'from-blue-500 to-cyan-400',
     skills: [
-      { name: 'Python', level: 90, category: 'language', icon: <Zap className="w-4 h-4" /> },
-      { name: 'C++', level: 75, category: 'language', icon: <Target className="w-4 h-4" /> },
+      { name: 'Python', level: 70, category: 'language', icon: <Zap className="w-4 h-4" /> },
+      { name: 'C++', level: 80, category: 'language', icon: <Target className="w-4 h-4" /> },
       { name: 'Java', level: 80, category: 'language', icon: <Award className="w-4 h-4" /> },
       { name: 'JavaScript', level: 85, category: 'language', icon: <Star className="w-4 h-4" /> },
       { name: 'HTML', level: 95, category: 'language', icon: <Monitor className="w-4 h-4" /> },
@@ -45,9 +45,9 @@ const skillCategories: SkillCategory[] = [
     icon: <Database className="w-6 h-6" />,
     color: 'from-green-500 to-emerald-400',
     skills: [
-      { name: 'MySQL', level: 85, category: 'tool', icon: <Database className="w-4 h-4" /> },
+      { name: 'MySQL', level: 90, category: 'tool', icon: <Database className="w-4 h-4" /> },
       { name: 'Git', level: 90, category: 'tool', icon: <Star className="w-4 h-4" /> },
-      { name: 'scikit-learn', level: 75, category: 'tool', icon: <Cpu className="w-4 h-4" /> },
+      { name: 'scikit-learn', level: 60, category: 'tool', icon: <Cpu className="w-4 h-4" /> },
       { name: 'Pandas', level: 85, category: 'tool', icon: <Award className="w-4 h-4" /> },
       { name: 'VS Code', level: 95, category: 'tool', icon: <Code className="w-4 h-4" /> },
     ],
@@ -57,8 +57,8 @@ const skillCategories: SkillCategory[] = [
     icon: <Cloud className="w-6 h-6" />,
     color: 'from-orange-500 to-red-400',
     skills: [
-      { name: 'AWS', level: 60, category: 'cloud', icon: <Cloud className="w-4 h-4" /> },
-      { name: 'Docker', level: 50, category: 'cloud', icon: <Server className="w-4 h-4" /> },
+      { name: 'AWS', level: 85, category: 'cloud', icon: <Cloud className="w-4 h-4" /> },
+      { name: 'Docker', level: 80, category: 'cloud', icon: <Server className="w-4 h-4" /> },
       { name: 'CI/CD', level: 45, category: 'cloud', icon: <Target className="w-4 h-4" /> },
     ],
   },
