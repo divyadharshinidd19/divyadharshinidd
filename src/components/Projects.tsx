@@ -20,6 +20,7 @@ const projects: Project[] = [
     image: "https://www.swic.edu/wp-content/uploads/2021/05/portfolio.png",
     technologies: ["Spring Boot", "MySQL", "Java", "REST API"],
     github: "https://github.com/iamneo-production/1b54fc67-cd30-4a51-acb5-59d2217ab2a6-15bff1f1-c779-4d7c-abe7-2f1dc0de8022",
+    demo: "https://divyadharshinidd19.netlify.app",
     category: "Web Development"
   },
   {
@@ -29,7 +30,7 @@ const projects: Project[] = [
     image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     technologies: ["Spring Boot", "MySQL", "Java", "REST API"],
     github: "https://github.com/iamneo-production/1b54fc67-cd30-4a51-acb5-59d2217ab2a6-15bff1f1-c779-4d7c-abe7-2f1dc0de8022",
-    category: "Web Development"
+    category: "Springboot-project"
   },
   {
     id: 3,
