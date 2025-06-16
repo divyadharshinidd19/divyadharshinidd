@@ -36,7 +36,7 @@ const projects: Project[] = [
     id: 3,
     title: "Enigma - Master the code",
     description: "Enigma is a next-gen coding platform inspired by LeetCode, offering AI-powered learning, live mock interviews, and competitive coding challenges. It helps students and job seekers practice, learn, and grow with real-time feedback and personalized guidance.",
-    image: "https://images.pexels.com/photos/1268124/pexels-photo-1268124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "https://www.shutterstock.com/image-photo/hands-typing-on-laptop-programming-600nw-2480023489.jpg",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Monaco Editor", "JWT", "Tailwind CSS"],
     github: "https://github.com/divyadharshinidd19/enigma",
     demo: "https://enigmathecoder.netlify.app",
