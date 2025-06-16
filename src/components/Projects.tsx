@@ -34,12 +34,12 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Smart Home Dashboard",
-    description: "Created an interactive dashboard for monitoring and controlling smart home devices. Features include real-time data visualization and device control.",
+    title: "Enigma - Master the code",
+    description: "Enigma is a next-gen coding platform inspired by LeetCode, offering AI-powered learning, live mock interviews, and competitive coding challenges. It helps students and job seekers practice, learn, and grow with real-time feedback and personalized guidance.",
     image: "https://images.pexels.com/photos/1268124/pexels-photo-1268124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    technologies: ["React", "Node.js", "Socket.io", "Chart.js"],
-    github: "https://github.com/yourusername/smart-home-dashboard",
-    demo: "https://example.com/smart-home",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Monaco Editor", "JWT", "Tailwind CSS"],
+    github: "https://github.com/divyadharshinidd19/enigma",
+    demo: "https://enigmathecoder.netlify.app",
     category: "Web Development"
   },
   {
