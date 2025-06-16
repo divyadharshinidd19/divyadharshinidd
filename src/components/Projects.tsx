@@ -48,27 +48,18 @@ const projects: Project[] = [
     description: "Built and trained a convolutional neural network for image classification. Achieved 92% accuracy on the test dataset.",
     image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     technologies: ["Python", "TensorFlow", "Keras", "CNN"],
-    github: "https://github.com/yourusername/image-classifier",
+    github: "https://github.com/divyadharshinidd19/student_prediction",
     category: "Machine Learning"
   },
   {
     id: 5,
-    title: "Personal Finance Tracker",
-    description: "Developed a web application for tracking personal finances. Features include expense categorization, budget planning, and visualization.",
-    image: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    technologies: ["React", "Firebase", "ChartJS", "Tailwind CSS"],
-    github: "https://github.com/yourusername/finance-tracker",
-    demo: "https://example.com/finance",
+    title: "AI - Resume Creater",
+    description: "An AI-powered resume builder that generates personalized, professional resumes in minutes based on user input. Includes real-time suggestions, formatting options, and PDF export for job-ready results.",
+    image: "https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1664371057/learnhowtobecome.org/04-Resume-Guide-1203940958_3962dd640/04-Resume-Guide-1203940958_3962dd640.jpg?_i=AA",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Monaco Editor", "JWT", "Tailwind CSS"],
+    github: "https://github.com/divyadharshinidd19/resume_creater",
+    demo: "https://resumecreater.netlify.app",
     category: "Web Development"
-  },
-  {
-    id: 6,
-    title: "Sales Prediction Algorithm",
-    description: "Created a time-series prediction model for retail sales forecasting. Implemented feature engineering and model optimization.",
-    image: "https://images.pexels.com/photos/7567444/pexels-photo-7567444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    technologies: ["Python", "scikit-learn", "Pandas", "Time Series Analysis"],
-    github: "https://github.com/yourusername/sales-prediction",
-    category: "Data Science"
   }
 ];
 
