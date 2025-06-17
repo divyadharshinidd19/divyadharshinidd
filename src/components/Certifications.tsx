@@ -131,7 +131,7 @@ const Certifications: React.FC = () => {
             View my complete collection of 40+ certificates:
           </p>
           <a 
-            href="https://drive.google.com/drive/folders/example" 
+            href="https://drive.google.com/drive/folders/1pjCG-TIL21DBsLWp5g2XardiJQPOHmxP?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 inline-flex items-center font-medium group"

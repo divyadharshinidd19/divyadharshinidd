@@ -44,8 +44,8 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Image Classification Model",
-    description: "Built and trained a convolutional neural network for image classification. Achieved 92% accuracy on the test dataset.",
+    title: "Student Database Prediction",
+    description: "A machine learning-based system that analyzes student data to predict academic performance and outcomes. Helps educators identify at-risk students early and make data-driven interventions for better success rates.",
     image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     technologies: ["Python", "TensorFlow", "Keras", "CNN"],
     github: "https://github.com/divyadharshinidd19/student_prediction",
