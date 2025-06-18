@@ -13,42 +13,42 @@ type Certification = {
 const certifications: Certification[] = [
   {
     id: 1,
-    title: "Machine Learning with Python",
-    issuer: "IBM",
-    date: "Aug 2023",
-    credential: "https://credentials.example.com/1234",
-    skills: ["Machine Learning", "Python", "Algorithms", "Data Analysis"]
+    title: "Introduction to IOT",
+    issuer: "NPTEL",
+    date: "May 2025",
+    credential: "https://drive.google.com/file/d/1ygsh7C1cbtlDVOeO-7gcGA8vXsQOEcAB/view?usp=drive_link",
+    skills: ["IOT", "Python", "Algorithms", "Data Structures"]
   },
   {
     id: 2,
-    title: "Deep Learning Specialization",
-    issuer: "Coursera",
-    date: "Oct 2023",
-    credential: "https://credentials.example.com/5678",
+    title: "Networking and Web Technology",
+    issuer: "Infosys Springboard",
+    date: "Jan 2025",
+    credential: "https://drive.google.com/file/d/1SiHtLXvnmnPr-z-fUI4y_uwnX9a6DXn1/view?usp=drive_link",
     skills: ["Neural Networks", "TensorFlow", "Computer Vision", "NLP"]
   },
   {
     id: 3,
-    title: "AWS Cloud Practitioner",
-    issuer: "AWS",
-    date: "Dec 2023",
-    credential: "https://credentials.example.com/9012",
-    skills: ["Cloud Computing", "AWS Services", "Security", "Architecture"]
+    title: "Learnathon-2024",
+    issuer: "ICT Academy",
+    date: "Oct 2024",
+    credential: "https://drive.google.com/file/d/1Lrg5xaCNsjdljlLkKc8nNqyBHvcpukgH/view?usp=sharing",
+    skills: ["Top 8 companies courses"]
   },
   {
     id: 4,
-    title: "Full Stack Web Development",
+    title: "AWS Certified Developer - Associate Certification",
     issuer: "Infosys Springboard",
     date: "Feb 2024",
-    credential: "https://credentials.example.com/3456",
-    skills: ["HTML/CSS", "JavaScript", "React", "Node.js", "MongoDB"]
+    credential: "https://drive.google.com/file/d/1BUf-NAHUUX6DSE2Cig9RSgDvQRpTbnYY/view?usp=drive_link",
+    skills: ["AWS", "Docker", "Security", "Cloud Computing"]
   },
   {
     id: 5,
-    title: "Data Science with Python",
-    issuer: "IBM",
-    date: "Mar 2024",
-    credential: "https://credentials.example.com/7890",
+    title: "Python Data Structures",
+    issuer: "Coursera",
+    date: "Jul 2024",
+    credential: "https://cour sera.org/ver ify/7MDBVPYVTJVG",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Data Visualization"]
   }
 ];
