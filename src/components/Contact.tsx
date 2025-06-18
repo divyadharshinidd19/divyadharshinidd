@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
             <div className="mt-8 pt-8 border-t border-blue-500/30">
               <h4 className="font-semibold text-white mb-4">Download Resume</h4>
               <a 
-                href="/path/to/your-resume.pdf" 
+                href="https://drive.google.com/file/d/1QTlgztX97wdvu1cEngJvGi8tTOkOJNMC/view?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 font-medium group"
